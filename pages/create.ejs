@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/header.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>CREATE YOUR BLOG HERE</h1>
+    <form action="">
+      <label for="title">Enter the title of the blog post</label><br />
+      <input type="text" /><br />
+      <label for="content">Enter the content of the blog post</label><br />
+      <textarea type="text" oninput="autoResize.call(this)"></textarea><br />
+      <button type="submit"><strong>SUBMIT</strong></button>
+    </form>
+    <script>
+      function autoResize() {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+      }
+    </script>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
