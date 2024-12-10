@@ -86,3 +86,9 @@ form button {
   border-radius: 7px;
   border: black 3px solid;
 }
+
+.about {
+  margin: 1.5% 5%;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+}
