@@ -4,12 +4,14 @@
   <body>
     <%- include("./partials/nav.ejs") %>
     <br /><br />
-    <h1>BLOGS</h1>
+    <h1 class="index">BLOGS</h1>
     <% if(blogs.length>0){ %> <% blogs.forEach((blog)=>{ %>
-    <div class="blog-box">
-      <h3 class="box-h3"><%= blog.title %></h3>
-      <p class="box-p"><%= blog.snippet %></p>
-    </div>
+    <a class="blog" href="/blogs/<%= blog._id %>">
+      <div class="blog-box">
+        <h3 class="box-h3"><%= blog.title %></h3>
+        <p class="box-p"><%= blog.snippets %></p>
+      </div>
+    </a>
     <% }) %> <% }else{ %>
     <p>There are no blogs to display....</p>
     <% } %> <%- include("./partials/footer.ejs") %>

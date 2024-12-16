@@ -9,14 +9,15 @@ body {
   color: azure;
 }
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: black;
   padding: 5vh 0vh;
   width: 100%;
   z-index: 100;
 }
 nav a {
-  color: aliceblue;
-  text-decoration: none;
   margin: 2vh;
   margin-right: 10%;
   transition: -webkit-transform 1s, transform 1s;
@@ -29,9 +30,17 @@ nav a:focus {
   transform: scale(2);
 }
 
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
 h1 {
   margin: 5%;
-  margin-top: 8%;
+  margin-top: 20%;
+}
+.index {
+  margin-top: 18%;
 }
 .blog-box {
   margin: 2%;
@@ -91,4 +100,8 @@ form button {
   margin: 1.5% 5%;
   font-size: 1.2rem;
   font-family: "Times New Roman", Times, serif;
+}
+
+#del {
+  cursor: pointer;
 }

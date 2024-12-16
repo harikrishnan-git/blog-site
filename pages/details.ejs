@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLOG | <%= title %></title>
+  </head>
+  <body>
+    <%- include("./partials/header") %>
+    <h1><%= blog.title %></h1>
+    <p><%= blog.body %></p>
+    <button id="del" data-doc="<%= blog._id %>">delete</button>
+    <script>
+      document.querySelector("#del").addEventListener("click", (e) => {
+        fetch("/blogs/" + e.target.dataset.doc, {
+          method: "DELETE",
+        })
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            window.location.href = data.redirect;
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
+    </script>
+  </body>
+</html>
